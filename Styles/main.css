@@ -1,8 +1,9 @@
 :root{
     --primary: #8C9A9E;
     --light: #888f9b;
-    --dark:#ffffff;
-    --blue:#D4F5F5;
+    --white:#ffffff;
+    --black:#000000;
+    --lightgrey:#f1f1f1;
 }
 
 
@@ -25,6 +26,7 @@ body{
     justify-content: space-around;
 }
 
+
 .title{
     text-align: center;
     margin-top: 70px;
@@ -33,13 +35,16 @@ body{
 }
 
 article{
-    height: 1000px;
-    background-color: white;
+    height: flex;
+    background-color: var(--white);
     font-size:36px;
-    border-top: 3px solid var(--primary);
 }
-
-
+h5{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
 .section{
     text-align:center;
     margin: 100px;
@@ -51,24 +56,24 @@ nav{
     left: 0;
     right: 0;
     z-index: 99;
-    background-color: var(--dark);
+    background-color: var(--white);
     padding: 16px 32px;
     border-bottom: 5px solid var(--light);
     display: block;
 }
 nav a{
     text-decoration: none;
-    color: #000000;
+    color: var(--black);
 }
 h1{
-    color: white;
+    color: var(--white);
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: 2px;
     
 }
 h2{
-    color:#000000;
+    color:var(--black);
     text-align: center;
     font-weight: 500;
     font-size: 1rem;
@@ -83,7 +88,7 @@ h3{
     
 }
 h4{
-    color: black;
+    color: var(--black);
     font-size: 1.75rem;
     font-weight: 700;
     letter-spacing: 1px;
@@ -139,7 +144,7 @@ h4{
 }
 
 .menu a {
-    color: black;
+    color: var(--black);
     font-size: 1.2rem;
     margin: 0 16px;
     font-weight: 600;
@@ -154,10 +159,8 @@ h4{
 }
 
 .parallax{
-    background:rgba(0, 0, 0, 0) url("kancelar.jpeg"); 
+    background:rgba(0, 0, 0, 0) url("../fotky/kancelar.jpeg"); 
     background-blend-mode: darken;
-    width: 100vw;
-    height: 100vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -168,7 +171,7 @@ h4{
     text-align: center;
     width: 85%;
     margin: auto auto;
-    height: 70vh;
+    height: 60vh;
 }
 
 
@@ -179,7 +182,7 @@ h4{
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: var(--lightgrey);
     min-width: 160px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -187,7 +190,7 @@ h4{
   }
   
   .dropdown-content a {
-    color: black;
+    color: var(--black);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -211,11 +214,11 @@ h4{
 .card {
     width: 80vw;
     height: 250px;
-    border: 6px solid var(--light);
-    border-radius: 3px;
-    background-color:#f1f1f1;
-    color: white;
-    box-shadow: 0px 0px 16px 0px rgb(0 0 0 / 50%);
+    border: 3px solid var(--light);
+    border-radius: 25px;
+    background-color:var(--lightgrey);
+    color: var(--white);
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.215);
     text-align: center;
     font-size: 16px;
     padding: 20px 20px 20px 20px;
@@ -230,7 +233,7 @@ h4{
     flex-shrink: 0;
     width: 21px;
     height: 21px;
-    background: url(./check.svg);
+    background: url(../fotky/check.svg);
 }
 
 * ::before {
@@ -239,13 +242,14 @@ h4{
 
 .editor ul li{
     position: relative;
-    color: #071d2b;
+    color: var(--black);
     font-size: 14px;
     line-height: 1.4;
     list-style-type: none;
     margin-bottom: 12px;
     padding-left: 30px;
     text-align: left;
+    font-weight: 500;
 }
 
 ul {
@@ -256,6 +260,42 @@ ul {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 100px;
+}
+
+img{
+    width: 100%;
+    height: 80vh;
+}
+
+.header-background{
+    background:rgba(0, 0, 0, 0.462) url(../fotky/nabídky.jpeg); 
+    background-blend-mode: darken;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin: auto auto;
+    height: 40vh;
+}
+
+h6{
+    color: var(--white);
+    font-size: 3rem;
+}
+
+p{
+    padding-bottom: 10px;
+    text-align: left;
+}
+.card ul{
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    padding-inline-start: 0px;
+
 }
 @media(max-width: 470px) {
     .parallax h1{
@@ -273,10 +313,66 @@ ul {
     }
 }
 
+
+
+
 @media(max-width: 740px) {
     .card-flex-wrap{
+        margin-top: 50px;
         flex-direction: column;
         align-items: center;
         justify-content: none;
+    }
+    .card{
+        margin-top: 20px;
+    }
+    h3{
+        font-size: 30px;
+        padding-bottom: 30px;
+    }
+    b h5{
+        display: none;
+    }
+    h6{
+        font-size:2.7rem;
+    }
+    .card ul li{
+        font-size: 1.3rem;
+    }
+    .card{
+        border: none;
+    }
+}
+
+
+@media(max-width: 650px){
+    .editor{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    ul{
+        padding: 0;
+    }
+    h4{
+        font-size: 1.4rem;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .title{
+        font-size: 2rem;
+    }
+}
+@media(max-width: 1110px){
+    .card{
+        height: 350px;
+    }
+}
+
+@media(max-width: 520px){
+    .card{
+        height: 550px;
     }
 }

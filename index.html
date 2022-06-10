@@ -6,13 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Účetnicví kvalitně a v čas</title>
     <link rel="stylesheet" href="Styles/normalize.css">
-      <link rel="stylesheet" href="Styles/main.css">
-      <link rel="stylesheet" href="Styles/fonts.css">
+    <link rel="stylesheet" href="Styles/main.css">
+    <link rel="stylesheet" href="Styles/fonts.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&family=Tangerine:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <nav>
+        <div class="container">
+            <a href="#"><h1>uctojbc</h1></a>
+            <div class="menu">
+                <a href="index.html" class="is-active">Home</a>
+                <a href="Stránky/Nabídky.html">Nabídky</a>
+                <a href="Stránky/Kontakt.html">Kontakt</a>
+                <a href="Stránky/Zdroje.html">Zdroje</a>
+            </div>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="hamburger is-active">   
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="index.html">Home</a>
+                  <a href="Stránky/Nabídky.html">Nabídky</a>
+                  <a href="Stránky/Kontakt.html">Kontakt</a>
+                  <a href="Stránky/Zdroje.html">Zdroje</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <header>
         <h5 class="title">
             Účetnictví pro malé a střední firmy
@@ -23,7 +48,7 @@
         <h4>
             Nabídka služeb
         </h4>
-        <element class="editor">
+        <div class="editor">
             <ul>
                 <li>Vedení účetnictví (podvojné účetnictví)</li>
                 <li>Vedení daňové evidence (jednoduché účetnictví)</li>
@@ -31,61 +56,32 @@
                 <li>Daňová přiznání a výkazy</li>
                 <li>Zastupování na úřadech</li>
             </ul>
-        </element>
+        </div>
     </header>
-    <nav>
-        <div class="container">
-            <a href="#"><h1>uctojbc</h1></a>
-            <div class="menu">
-                <a href="index.html" class="is-active">Home</a>
-                <a href="Stránky/Nabídky.html">Nabídky</a>
-                <a href="Stránky/Onás.html">O nás</a>
-                <a href="Stránky/Kontakt.html">Kontakt</a>
-            </div>
-            
-            
-            <div class="dropdown">
-                <button onclick="myFunction()" class="hamburger is-active">   
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <div id="myDropdown" class="dropdown-content">
-                  <a href="index.html">Home</a>
-                  <a href="Stránky/Nabídky.html">Nabídky</a>
-                  <a href="Stránky/Onás.html">O nás</a>
-                  <a href="Stránky/Kontakt.html">Kontakt</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-
 <div class="parallax">
-    <h4></h4>
 </div>
-<article>
-    <div class="card-flex-wrap">
-        <div class="card">
-            <div style="color:black">
-                <h3>Elektroinstalace zařízení</h3>
-                <p>Zařídíme pro vás celou elektroinstalaci se vším všudy</p>
-                <p>Přes výrobu, instalaci až revizi zařízení</p>
-            </div>
-        </div>
-        <div class="card">
-            <div style="color:black">
-                <h3>Průmyslová elektromontáž</h3>
-            </div>
-        </div>
-        <div class="card">
-            <div style="color:black">
-                <h3>Servisní činnosti</h3>
-            </div>
-        </div>
-        
-    </div>
-</article>
+<div class="nadpis-onas">
+    <h4>
+        Proč s námi?
+    </h4>
+</div>
+<div class="editor">
+    <ul>
+        <li>Vedení účetnictví (podvojné účetnictví)</li>
+        <li>Vedení daňové evidence (jednoduché účetnictví)</li>
+        <li>Vedení mzdové a personální agendy</li>
+        <li>Daňová přiznání a výkazy</li>
+        <li>Zastupování na úřadech</li>
+    </ul>
+</div>
+<div class="nadpis-onas">
+    <h4>A cena?</h4>
+</div>
+<div class="onas">
+        <p>Kolik si za svoje služby účtuji?</p>
+        <p>Ceny účetních prací se odvíjí od počtu zaúčtovaných položek v účetním nebo peněžním deníku.</p>
+        <p>Výsledná cena je stanovena po úvodní bezplatné konzultaci s Vámi a po zjištění rozsahu a stavu účetnictví s ohledem na Vámi požadované služby a případné zvláštní požadavky.</p>
+</div>
     <script src="main.js"></script>
 </body>
 </html>

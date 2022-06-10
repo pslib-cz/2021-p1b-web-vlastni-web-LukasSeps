@@ -20,7 +20,6 @@ body{
     max-width: 1280px;
     max-height: 200px;
     margin: 0 auto;
-
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -35,6 +34,7 @@ body{
 }
 
 article{
+    margin-top: -40px;
     height: flex;
     background-color: var(--white);
     font-size:36px;
@@ -46,10 +46,20 @@ h5{
     font-size: 2.5rem;
 }
 .section{
-    text-align:center;
-    margin: 100px;
-
+    text-align: center;
+    margin: 50px 50px 50px 100px;
 }
+
+.section h2{
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+.section p{
+    padding-top: 10px;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
 nav{
     position: fixed;
     top: 0;
@@ -94,6 +104,7 @@ h4{
     letter-spacing: 1px;
     margin-bottom: 40px;
     padding-left: 100px;
+    margin-bottom: 20px;
 }
 .section p{
     padding-bottom: 20px;
@@ -158,6 +169,51 @@ h4{
     background-color: var(--light);
 }
 
+
+.onas ul li:before, .list li:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 21px;
+    height: 21px;
+    background: url(../fotky/check.svg);
+}
+
+.nadpis-onas h4{
+    color: var(--black);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    padding-left: 210px;
+    margin-top: 50px;
+    font-display: center;
+}
+
+.onas ul li{
+    position: relative;
+    color: var(--black);
+    font-size: 20px;
+    line-height: 1.4;
+    list-style-type: none;
+    margin-bottom: 12px;
+    padding-left: 30px;
+    text-align: left;
+    font-weight: 500;
+}
+.onas ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 3em;
+    margin-block-end: 5em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 20px;
+}
+
 .parallax{
     background:rgba(0, 0, 0, 0) url("../fotky/kancelar.jpeg"); 
     background-blend-mode: darken;
@@ -199,6 +255,20 @@ h4{
 
 
 
+.onas p{
+    text-align: left;
+    padding-top:15px;
+    font-size: 1.3rem;
+    margin-left: 0px;
+}
+
+.onas{
+    margin-left: 125px;
+    margin-right: 125px;
+    margin-top: 30px;
+    margin-bottom: 125px;
+}
+
 .card-long-flex-wrap {
     display: flex;
     justify-content: center;
@@ -208,12 +278,13 @@ h4{
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 100px;
+    margin-top: 150px;
+    margin-bottom: 100px;
 }
 
 .card {
     width: 80vw;
-    height: 250px;
+    height: 300px;
     border: 3px solid var(--light);
     border-radius: 25px;
     background-color:var(--lightgrey);
@@ -243,7 +314,7 @@ h4{
 .editor ul li{
     position: relative;
     color: var(--black);
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1.4;
     list-style-type: none;
     margin-bottom: 12px;
@@ -256,7 +327,7 @@ ul {
     display: block;
     list-style-type: disc;
     margin-block-start: 1em;
-    margin-block-end: 5em;
+    margin-block-end: 3em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 100px;
@@ -282,21 +353,66 @@ img{
     height: 40vh;
 }
 
+.header-background02{
+    background:rgba(0, 0, 0, 0.462) url(../fotky/stul.webp); 
+    background-blend-mode: darken;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin: auto auto;
+    height: 60vh;
+}
+
+.header-background02 h6{
+    font-size: 5rem;
+}
+
 h6{
     color: var(--white);
     font-size: 3rem;
 }
 
 p{
-    padding-bottom: 10px;
+    padding-bottom: 0px;
     text-align: left;
 }
 .card ul{
     padding: 0px 0px 0px 0px;
     margin: 0px;
     padding-inline-start: 0px;
-
 }
+
+.zdroje {
+    position: absolute;
+    bottom: 7px;
+    right: 60px;
+    font-size: 17px;
+    color: var(--black);
+    border: var(--black) solid 1px;
+    padding: 4px;
+    text-decoration: none;
+}
+
+.zdroje-seznam {
+    list-style: none;
+    padding: 0;
+}
+
+.zdroje-seznam li {
+    margin: 6px 0;
+    font-size: 19px;
+}
+
+.zdroje-seznam li a {
+    text-decoration: underline;
+    color: var(--black);
+}
+
 @media(max-width: 470px) {
     .parallax h1{
         font-size: 20px;
@@ -314,15 +430,20 @@ p{
 }
 
 
-
-
-@media(max-width: 740px) {
+@media(max-width: 1000px){
     .card-flex-wrap{
         margin-top: 50px;
+        margin-bottom: 0px;
         flex-direction: column;
         align-items: center;
         justify-content: none;
     }
+    h5{
+        padding-bottom: 30px;
+    }
+}
+
+@media(max-width: 740px) {
     .card{
         margin-top: 20px;
     }
@@ -361,8 +482,23 @@ p{
         justify-content: center;
         margin-bottom: 20px;
     }
+    .nadpis-onas h4{
+        display: flex;
+        justify-content: center;
+        margin-left: 0px;
+        padding: 0px;
+    }
+    .onas ul{
+        padding: 0px;
+    }
+
     .title{
         font-size: 2rem;
+    }
+    .onas{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 @media(max-width: 1110px){

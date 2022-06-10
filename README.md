@@ -61,3 +61,6 @@ Po splnění předchozích bodů
 
 * [CSS Tricks Guides](https://css-tricks.com/guides/)
 * [Metodika BEM](http://getbem.com/introduction/)
+
+## Odkaz na stránku
+* https://pslib-cz.github.io/2021-p1b-web-vlastni-web-LukasSeps/
